@@ -6,7 +6,12 @@ from .models import Post
 def helloBlog(request):
   # return HttpResponse('Blog')
   lista = ['Django', 'Python', 'Git', 'Html', 'Banco de Dados', 'Linux', 'Nginx', 'Uwsgi', 'Systemctl']
-  postsList = Post.objects.all()
+  postsList = Post.objects.filter(deleted=True)
   data = {'name': 'Lucas Aquino', 'listaTecnologias' : lista, 'posts': postsList}
   
   return render(request, 'index.html', data)
+
+
+def postDetail(request, id):
+  post = Post.objects.get(id=id)
+  return render(request, 'postDetail.html', {'post': post})
