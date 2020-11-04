@@ -1,3 +1,5 @@
 .docx
 .tmp
+.vscode
 venv
+media

@@ -29,19 +29,8 @@
 
 				<!-- One -->
 					<section id="one">
-						<header class="major">
-              <h2>{{post.title}}</h2>
-              <h4>{{post.subTitle}}</h4>
-						</header>
-            <p>{{post.content}}</p>
-            {%if post.imagem %}
-              <img src="{{post.imagem.url}}" alt=""  width="500"/>
-            {% else %}
-              <img src="{% static 'images/fulls/01.jpg' %}" alt="" width="500"/>
-            {% endif %}
-						<ul class="actions">
-							<li><a href="{% url 'blogHome' %}" class="button">Go home</a></li>
-						</ul>
+            <h1> Obrigado {{nameContact}}, seu contato foi recebido </h1>
+            <a href="/">Voltar para home</a>
 					</section>
 
 			</div>
